@@ -1,14 +1,13 @@
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
-import Home from './Routes/Home';
-import Contact from './Routes/Contact';
-import Detail from './Routes/Detail';
-import Favs from './Routes/Favs';
-import { ContextProvider } from './Components/utils/global.context';
-import { ContextGlobal } from './Components/utils/global.context';
-import React, { useContext } from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import Home from "./Routes/Home";
+import Contact from "./Routes/Contact";
+import Detail from "./Routes/Detail";
+import Favs from "./Routes/Favs";
+import { ContextProvider } from "./Components/utils/global.context";
+import { ContextGlobal } from "./Components/utils/global.context";
+import { useContext } from "react";
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
 
 function AppContent() {
   const { state } = useContext(ContextGlobal);
-  const theme = state.theme === 'dark' ? 'dark' : 'light';
+  const theme = state.theme === "dark" ? "dark" : "light";
 
   return (
     <>

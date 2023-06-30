@@ -1,20 +1,21 @@
-import { useContext,  useEffect } from 'react';
-import { ContextGlobal } from '../Components/utils/global.context';
-import Card from '../Components/Card';
-
+import { useContext, useEffect } from "react";
+import { ContextGlobal } from "../Components/utils/global.context";
+import Card from "../Components/Card";
 
 const Home = () => {
   const { state, setData } = useContext(ContextGlobal);
-  const theme = state.theme === 'dark' ? 'dark' : 'light';
+  const theme = state.theme === "dark" ? "dark" : "light";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
         const data = await response.json();
-        setData(data); 
+        setData(data);
       } catch (error) {
-        console.log('Error fetching data:', error);
+        console.log("Error fetching data:", error);
       }
     };
 

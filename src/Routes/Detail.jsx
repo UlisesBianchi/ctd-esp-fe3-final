@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 const Detail = () => {
   const { id } = useParams();
@@ -14,7 +14,7 @@ const Detail = () => {
         const data = await response.json();
         setUser(data);
       } catch (error) {
-        console.log('Error fetching user data:', error);
+        console.log("Error fetching user data:", error);
       }
     };
 
@@ -23,13 +23,13 @@ const Detail = () => {
 
   return (
     <>
-      <h1>Detail Dentist id {id}</h1>
+      <h1>Detalles Dentista {id}</h1>
       {user && (
-        <div>
+        <div style={{ textAlign: "center" }}>
           <h2>{user.name}</h2>
           <p>Email: {user.email}</p>
-          <p>Phone: {user.phone}</p>
-          <p>Website: {user.website}</p>
+          <p>Telefono: {user.phone}</p>
+          <p>Pagina Web: {user.website}</p>
         </div>
       )}
     </>

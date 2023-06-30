@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import Card from '../Components/Card';
-import { ContextGlobal } from '../Components/utils/global.context';
+import { useContext } from "react";
+import Card from "../Components/Card";
+import { ContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
   const { state } = useContext(ContextGlobal);
-  const theme = state.theme === 'dark' ? 'dark' : 'light';
+  const theme = state.theme === "dark" ? "dark" : "light";
 
   return (
     <>
